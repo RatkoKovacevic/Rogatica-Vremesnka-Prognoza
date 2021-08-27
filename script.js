@@ -122,7 +122,7 @@ function showWeatherData(data) {
       }
       let { temp } = data.current
       currentTempEl.innerHTML = `
-            <img src="http://openweathermap.org/img/wn//${
+            <img src="https://openweathermap.org/img/wn//${
               day.weather[0].icon
             }@4x.png" alt="weather icon" class="w-icon">
             <div class="other">
@@ -149,7 +149,7 @@ function showWeatherData(data) {
       otherDayForcast += `
             <div class="weather-forecast-item">
                 <div class="day">${sdan}</div>
-                <img src="http://openweathermap.org/img/wn/${
+                <img src="https://openweathermap.org/img/wn/${
                   day.weather[0].icon
                 }@2x.png" alt="weather icon" class="w-icon">
                 <div class="temp">Max - ${day.temp.max.toFixed(1)}&#176;C</div>
