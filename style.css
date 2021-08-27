@@ -95,7 +95,7 @@ body {
 
 .future-forecast {
   background: var(--main-bg-color);
-  padding: 25px;
+  padding: 15px 25px;
   position: fixed;
   bottom: 0;
   display: flex;
@@ -129,6 +129,7 @@ body {
 .future-forecast .today .temp {
   font-size: 18px;
   padding-top: 15px;
+  text-align: center;
 }
 
 .future-forecast .weather-forecast {
@@ -162,9 +163,9 @@ body {
 
 @media only screen and (max-width: 600px) {
   .logo-position img {
-    max-width: 50%;
+    max-width: 90%;
     height: auto;
-    right: 25%;
+    right: 5%;
   }
   .date-container .time {
     font-size: 1rem;
@@ -187,7 +188,7 @@ body {
   }
   .future-forecast .today {
     border-radius: 10px;
-    padding: 1rem;
+    padding: 0.6rem;
     padding-right: 40px;
     border-radius: 10px;
   }
@@ -197,10 +198,17 @@ body {
     font-size: 0.9rem;
   }
   .future-forecast .today .temp {
-    font-size: 0.9rem;
+    font-size: 0.8rem;
+    padding: 1rem;
+    display: block;
+    text-align: center;
   }
   .today img {
-    height: 6rem;
+    height: 7rem;
+  }
+
+  .weather-item div{
+padding: 0 5px;
   }
   .weather-forecast .weather-forecast-item {
     margin: 0 10px;

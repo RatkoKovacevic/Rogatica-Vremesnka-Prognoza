@@ -55,7 +55,6 @@ function getWeatherData() {
     )
       .then((res) => res.json())
       .then((data) => {
-        console.log(data);
         showWeatherData(data);
       });
   });
@@ -65,7 +64,7 @@ function showWeatherData(data) {
   let { humidity, pressure, sunrise, sunset, wind_speed } = data.current;
 
   currentWeatherItemsEl.innerHTML = `<div class="weather-item">
-        <div>Vlažnost vazduha</div>
+        <div>Vlažnost</div>
         <div>${humidity}%</div>
     </div>
     <div class="weather-item">
@@ -73,7 +72,7 @@ function showWeatherData(data) {
         <div>${pressure} mbar</div>
     </div>
     <div class="weather-item">
-        <div>Vjetar</div>
+        <div>Brzina vjetra</div>
         <div>${wind_speed} m/s</div>
     </div>
 
@@ -88,10 +87,6 @@ function showWeatherData(data) {
     
     
     `;
-
-  const dani =
-    "https://api.openweathermap.org/data/2.5/weather?q=Rogatica,ba&lang=hr&APPID=1a3c642b03f325c67d6ce21c60c56512";
-  console.log(dani);
 
   let otherDayForcast = "";
   data.daily.forEach((day, idx) => {
@@ -125,16 +120,14 @@ function showWeatherData(data) {
           console.log("err");
         }
       }
-
+      let { temp } = data.current
       currentTempEl.innerHTML = `
             <img src="http://openweathermap.org/img/wn//${
               day.weather[0].icon
             }@4x.png" alt="weather icon" class="w-icon">
             <div class="other">
                 <div class="day">${dani}</div>
-                <div class="temp">Max - ${day.temp.max.toFixed(1)}&#176;C</div>
-                <div class="temp">Min - ${day.temp.min.toFixed(1)}&#176;C</div>
-
+                <div class="temp">Temp: ${temp.toFixed(1)}&#176;C</div>
             </div>
             
             `;
@@ -163,7 +156,7 @@ function showWeatherData(data) {
                 <div class="temp">Min - ${day.temp.min.toFixed(1)}&#176;C</div>
             </div>
             
-            `;
+            `
     }
   });
 
