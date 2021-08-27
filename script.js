@@ -152,8 +152,8 @@ function showWeatherData(data) {
                 <img src="https://openweathermap.org/img/wn/${
                   day.weather[0].icon
                 }@2x.png" alt="weather icon" class="w-icon">
-                <div class="temp">Max - ${day.temp.max.toFixed(1)}&#176;C</div>
-                <div class="temp">Min - ${day.temp.min.toFixed(1)}&#176;C</div>
+                <div class="temp">Max: ${day.temp.max.toFixed(1)}&#176;C</div>
+                <div class="temp">Min: ${day.temp.min.toFixed(1)}&#176;C</div>
             </div>
             
             `
