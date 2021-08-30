@@ -199,8 +199,8 @@ body {
     font-size: 0.9rem;
   }
   .future-forecast .today .temp {
-    font-size: 0.8rem;
-    padding: 1rem;
+    font-size: 1.9rem;
+    padding: 0.8rem;
     display: block;
     text-align: center;
   }
@@ -212,7 +212,7 @@ body {
 padding: 0 5px;
   }
   .weather-forecast .weather-forecast-item {
-    margin: 0 10px;
+    margin: 0 9px;
     padding: 10px 0px;
     font-size: 0.6rem;
   }
@@ -227,7 +227,8 @@ padding: 0 5px;
 
   .weather-forecast .weather-forecast-item .temp {
     font-weight: 600;
-    font-size: 0.4rem;
+    font-size: 0.7rem;
+    padding: 0 0 5px 0;
     text-align: center;
   }
 }
