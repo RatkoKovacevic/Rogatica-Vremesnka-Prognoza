@@ -190,7 +190,7 @@ body {
   .future-forecast .today {
     border-radius: 10px;
     padding: 0.6rem;
-    padding-right: 40px;
+    padding-right: 15px;
     border-radius: 10px;
   }
   .future-forecast .today .day {
