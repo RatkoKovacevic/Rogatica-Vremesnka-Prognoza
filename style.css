@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap");
 
 :root {
   --main-bg-color: rgb(233, 236, 239, 0.8);
@@ -16,7 +16,7 @@ body {
   background-size: cover;
   overflow: hidden;
   height: 100vh;
-  font-family: "Poppins", sans-serif;
+  font-family: "Poppins", Arial, Helvetica, sans-serif;
   font-weight: 700;
 }
 
@@ -168,13 +168,14 @@ body {
     right: 5%;
   }
   .date-container .time {
-    font-size: 1rem;
+    font-size: 2rem;
   }
   .date-container .date {
     font-size: 1rem;
   }
   .place-container .time-zone {
-    font-size: 1rem;
+    font-size: 1.2rem;
+    font-weight: 600;
   }
   .current-info .others {
     padding: 10px;

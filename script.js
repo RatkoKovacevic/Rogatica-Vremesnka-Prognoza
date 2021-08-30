@@ -7,27 +7,27 @@ const weatherForecastEl = document.getElementById("weather-forecast");
 const currentTempEl = document.getElementById("current-temp");
 
 const days = [
-  "Nedelja",
-  "Ponedeljak",
-  "Utorak",
-  "Srijeda",
-  "Četvrtak",
-  "Petak",
-  "Subota",
+  "Недеља",
+  "Понедељак",
+  "Уторак",
+  "Сриједа",
+  "Четвртак",
+  "Петак",
+  "Субота",
 ];
 const months = [
-  "Jan",
-  "Feb",
-  "Mar",
-  "Apr",
-  "Maj",
-  "Jun",
-  "Jul",
-  "Aug",
-  "Sep",
-  "Okt",
-  "Nov",
-  "Dec",
+  "Jaн",
+  "Феб",
+  "Мар",
+  "Aпр",
+  "Mај",
+  "Јун",
+  "Jул",
+  "Aуг",
+  "Сеп",
+  "Oкт",
+  "Нов",
+  "Дец",
 ];
 
 const API_KEY = "1a3c642b03f325c67d6ce21c60c56512";
@@ -64,24 +64,24 @@ function showWeatherData(data) {
   let { humidity, pressure, sunrise, sunset, wind_speed } = data.current;
 
   currentWeatherItemsEl.innerHTML = `<div class="weather-item">
-        <div>Vlažnost</div>
+        <div>Влажност</div>
         <div>${humidity}%</div>
     </div>
     <div class="weather-item">
-        <div>Pritisak</div>
+        <div>Притисак</div>
         <div>${pressure} mbar</div>
     </div>
     <div class="weather-item">
-        <div>Brzina vjetra</div>
+        <div>Брзина вјетра</div>
         <div>${wind_speed} m/s</div>
     </div>
 
     <div class="weather-item">
-        <div>Izlazak sunca</div>
+        <div>Излазак сунца</div>
         <div>${window.moment(sunrise * 1000).format("hh:mm")}</div>
     </div>
     <div class="weather-item">
-        <div>Zalazak sunca</div>
+        <div>Залазак сунца</div>
         <div>${window.moment(sunset * 1000).format("hh:mm")}</div>
     </div>
     
@@ -104,13 +104,13 @@ function showWeatherData(data) {
         "Sunday",
       ];
       const daniN = [
-        "Ponedeljak",
-        "Utorak",
-        "Srijeda",
-        "Četvrtak",
-        "Petak",
-        "Subota",
-        "Nedelja",
+        "Понедељак",
+        "Уторак",
+        "Сриједа",
+        "Четвртак",
+        "Петак",
+        "Субота",
+        "Недеља",
       ];
 
       for (let i = 0; i < daniU.length; i++) {
@@ -122,12 +122,12 @@ function showWeatherData(data) {
       }
       let { temp } = data.current
       currentTempEl.innerHTML = `
-            <img src="https://openweathermap.org/img/wn//${
+            <img src="http://openweathermap.org/img/wn//${
               day.weather[0].icon
             }@4x.png" alt="weather icon" class="w-icon">
             <div class="other">
                 <div class="day">${dani}</div>
-                <div class="temp">Temp: ${temp.toFixed(1)}&#176;C</div>
+                <div class="temp">Teмп: ${temp.toFixed(1)}&#176;C</div>
             </div>
             
             `;
@@ -136,7 +136,7 @@ function showWeatherData(data) {
       let sdan = "";
 
       const sdaniU = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"];
-      const sdaniN = ["Pon", "Uto", "Sri", "Čet", "Pet", "Sub", "Ned"];
+      const sdaniN = ["Пон", "Утo", "Сри", "Чет", "Пет", "Суб", "Нед"];
 
       for (let i = 0; i < sdaniU.length; i++) {
         if (sdani == sdaniU[i]) {
@@ -152,8 +152,8 @@ function showWeatherData(data) {
                 <img src="https://openweathermap.org/img/wn/${
                   day.weather[0].icon
                 }@2x.png" alt="weather icon" class="w-icon">
-                <div class="temp">Max: ${day.temp.max.toFixed(1)}&#176;C</div>
-                <div class="temp">Min: ${day.temp.min.toFixed(1)}&#176;C</div>
+                <div class="temp">Maкс: ${day.temp.max.toFixed(1)}&#176;C</div>
+                <div class="temp">Mин: ${day.temp.min.toFixed(1)}&#176;C</div>
             </div>
             
             `
